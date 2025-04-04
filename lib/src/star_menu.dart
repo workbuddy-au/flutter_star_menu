@@ -220,15 +220,15 @@ class StarMenuState extends State<StarMenu>
     resetForChanges();
   }
 
-  @override
-  void didChangeMetrics() {
-    if (menuState == MenuState.closed) {
-      return;
-    }
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      resetForChanges();
-    });
-  }
+  // @override
+  // void didChangeMetrics() {
+  //   if (menuState == MenuState.closed) {
+  //     return;
+  //   }
+  //   WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+  //     resetForChanges();
+  //   });
+  // }
 
   void resetForChanges() {
     if (_items.isEmpty || menuState == MenuState.closed) return;
